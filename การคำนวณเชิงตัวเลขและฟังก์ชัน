@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="200" height="200" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML canvas tag.</canvas>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+
+for (let i = 0; i < 8; i++) {
+  
+ctx.moveTo(i/8*(c.width),0);
+ctx.lineTo(i/8*(c.width),c.height);
+
+ctx.moveTo(0,(i/8*(c.height)));
+ctx.lineTo((c.width),i/8*(c.height));
+
+
+ctx.stroke();
+}
+</script>
+
+</body>
+</html>
+
